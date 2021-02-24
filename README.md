@@ -17,3 +17,31 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 * Docs: <https://hexdocs.pm/phoenix>
 * Forum: <https://elixirforum.com/c/phoenix-forum>
 * Source: <https://github.com/phoenixframework/phoenix>
+
+---
+
+## Commands
+
+### install dependencies
+
+```bash
+mix ecto.setup
+```
+
+### create config
+
+```bash
+mix credo gen.config 
+```
+
+### start server
+
+```bash
+mix phx.server
+```
+
+### interactive terminal
+
+```bash
+iex -S mix
+```
