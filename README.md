@@ -45,3 +45,13 @@ mix phx.server
 ```bash
 iex -S mix
 ```
+
+---
+
+## Install
+
+### dependencies
+
+```bash
+mix phx.new rocketpay --no-webpack --no-html
+```

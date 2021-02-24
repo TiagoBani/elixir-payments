@@ -2,16 +2,21 @@ version: '3'
 
 services:
 
-  # mongo:
-  #   image: mongo
-  #   restart: always
-  #   # environment:
-  #     # MONGO_INITDB_ROOT_USERNAME: root
-  #     # MONGO_INITDB_ROOT_PASSWORD: example
-  #   ports:
-  #     - 27017:27017
+  app:
+    # image: elixir:1.9.4-alpine
+    build: .
+    working_dir: /opt/app
+    volumes:
+      - .:/opt/app
+    environment:
+      SKIP_PHOENIX: "true"
+      MIX_ENV: "dev"
+    depends_on:
+      - db
+    ports:
+      - 4000:4000
 
-  postgres:
+  db:
     image: postgres:13-alpine
     restart: always
     volumes:
@@ -23,7 +28,5 @@ services:
     ports:
       - 5432:5432
 
-  # redis:
-  #   image: redis:alpine
-  #   ports:
-  #     - 6379:6379
+volumes:
+  rocketpay:
