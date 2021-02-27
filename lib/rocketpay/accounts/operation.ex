@@ -1,4 +1,4 @@
-defmodule Rocketpay.Account.Operation do
+defmodule Rocketpay.Accounts.Operation do
   alias Ecto.Multi
   alias Rocketpay.{Account, Repo}
 
