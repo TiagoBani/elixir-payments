@@ -9,6 +9,7 @@ services:
       - .:/opt/app
     environment:
       SKIP_PHOENIX: "true"
+      # dev or test
       MIX_ENV: "dev"
     depends_on:
       - db
