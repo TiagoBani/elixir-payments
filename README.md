@@ -25,25 +25,47 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 ### install dependencies
 
 ```bash
-mix ecto.setup
+docker-compose exec app mix ecto.setup
 ```
 
 ### create config
 
 ```bash
-mix credo gen.config 
+docker-compose exec app mix credo gen.config 
 ```
 
 ### start server
 
 ```bash
-mix phx.server
+docker-compose exec app mix phx.server
+```
+
+show logs
+
+```bash
+docker-compose logs -tf
+```
+
+### start tests
+
+exec tests
+
+```bash
+docker-compose exec app mix test
+```
+
+report coverage
+
+open `./cover/exccoveralls.html`
+
+```
+docker-compose exec app mix coveralls.html
 ```
 
 ### interactive terminal
 
 ```bash
-iex -S mix
+docker-compose exec app iex -S mix
 ```
 
 ---
@@ -53,5 +75,5 @@ iex -S mix
 ### dependencies
 
 ```bash
-mix phx.new rocketpay --no-webpack --no-html
+docker-compose exec app mix phx.new rocketpay --no-webpack --no-html
 ```
