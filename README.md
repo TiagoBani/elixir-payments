@@ -1,5 +1,9 @@
 # Rocketpay
 
+Application to create users and transfer amounts balance
+
+---
+
 ## Routes
 
 _No Authorization_
@@ -110,16 +114,38 @@ docker-compose exec app mix deps.get
 docker-compose exec app mix ecto.setup
 ```
 
-- Start Phoenix endpoint with `mix phx.server`
+## _No use `docker` and only use `elixir` ?_
+
+before [install elixir](https://elixir-lang.org/install.html)
+
+```bash
+mix phx.new rocketpay --no-webpack --no-html
+```
+
+```bash
+mix deps.get
+```
+
+```bash
+mix ecto.setup
+```
+
+Start Phoenix
+
+```bash
+mix phx.server
+```
 
 ---
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+## Ready to run in production? Please [check phoenix deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
 ## Learn more
 
-- Official website: <https://www.phoenixframework.org/>
-- Guides: <https://hexdocs.pm/phoenix/overview.html>
-- Docs: <https://hexdocs.pm/phoenix>
+- Official website `Elixir`: <https://elixir-lang.org/>
+- Official website `Phoenix`: <https://www.phoenixframework.org/>
+- Guides `Phoenix`: <https://hexdocs.pm/phoenix/overview.html>
+- Docs `Phoenix`: <https://hexdocs.pm/phoenix>
+- Docs `Ecto`: <https://hexdocs.pm/ecto/Ecto.html>
 - Forum: <https://elixirforum.com/c/phoenix-forum>
 - Source: <https://github.com/phoenixframework/phoenix>
